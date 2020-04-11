@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
   <head>
 
     <!-- NASTAVENIA -->
@@ -13,11 +14,15 @@
     <!-- FONTS -->
       <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap&subset=latin-ext" rel="stylesheet"> 
 
-      <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap&subset=latin-ext" rel="stylesheet">  
+      <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap&subset=latin-ext" rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,400&display=swap&subset=latin-ext" rel="stylesheet">   
     <!-- FONTS --> 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
 
     <!-- CSS / CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -32,10 +37,13 @@
 
 
   <body>
-    <h1 class="text-center border-primary">QUIZ APP</h1>
+    <p id="main-info-text" class="text-center">Zisti výšku svojho IQ</p>
+    <h1 id="main-headline" class="text-center border-primary">IQ TEST</h1>
+    
 
 
-    <section id="select" class="border border-warning hide">
+
+    <section id="select" class="hide">
 
       <div class="container-fluid">
         <div class="container">
@@ -44,15 +52,24 @@
             <div class="col">
 
               <div id="question-container">
-                <div id="question" class="lead">Question</div>
-                <div id="question-img" class="border border-dark">Image</div>
+                <div id="question" class="">Question</div>
+                <div id="question-img"> 
+                  <img id="image" src="img/img_test.jpg" class="border border-dark" alt=""> 
+                </div>
 
                 <div id="answer-buttons" class="btn-grid">
-                  <button class="btn btn-dark">Answer 1</button>
-                  <button class="btn btn-dark">Answer 2</button>
-                  <button class="btn btn-dark">Answer 3</button>
-                  <button class="btn btn-dark">Answer 4</button>
+                    <button class="btn btn-dark">Answer 1</button>
+                    <button class="btn btn-dark">Answer 2</button>
+                    <button class="btn btn-dark">Answer 3</button>
+                    <button class="btn btn-dark">Answer 1</button>
+                    <button class="btn btn-dark">Answer 2</button>
+                    <button class="btn btn-dark">Answer 3</button>
                 </div>
+              </div>
+
+              <div id="question-controls">
+                <button class="btn btn-danger">Naspäť</button>
+                <button id="next-btn" type="button" class="btn btn-primary " class="next-btn btn">Next</button>
               </div>
 
             </div>
@@ -65,13 +82,25 @@
 
     <section id="controls" class="">
       <div class="container-fluid">
-        <div class="container text-center">
+        <div class="container text-center box-shadow">
           <div class="controls border-success">
-              <button id="start-btn" type="button" class="btn btn-primary" class="start-btn btn btn-primary btn-lg btn-block">Start</button>
-              <button id="next-btn" type="button" class="btn btn-warning hide" class="next-btn btn">Next</button>
+              <button id="start-btn" type="button" class="btn btn-primary" class="start-btn btn btn-primary btn-lg btn-block">Nový test</button>
+
+              <button id="" type="button" class="btn btn-dark btn-lg btn-block">Výsledky</button>
+
+              <button id="" type="button" class="btn btn-dark btn-lg btn-block">Informácie</button>
+
+              <button id="theEnd-btn" type="button" class="theEnd-btn btn btn-danger btn-lg btn-block">Koniec</button>
+
           </div>
         </div>
        </div> 
+    </section>
+
+    <section id="main-footer" class="text-center">
+      
+          <p class="">FOOTER</p>
+
     </section>
 
 
