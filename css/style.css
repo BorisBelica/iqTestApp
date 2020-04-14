@@ -9,17 +9,19 @@
 	--menu-speed: 0.75s;
 }
 
-/* fonts 
+/* ------------ MAIN FONTS ---------------- */
 
+/*
 Headings: 
 font-family: 'Montserrat', sans-serif; 
 font-family: 'Lato', sans-serif;
 
 
-Body: font-family: 'Inconsolata', monospace;
-
+Body: 
+font-family: 'Inconsolata', monospace;
 
 */
+/* ------------ MAIN FONTS ---------------- */
 
 
 /* _____________________________________ SETTINGS _____________________________________ */
@@ -46,6 +48,17 @@ h1, h2, h3 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;  
 }
+
+.hide {
+	display: none;
+}
+
+.box-shadow {
+	padding: 2rem;
+	box-shadow: 0 0 5px 2px;
+	background-color: white;
+	border: 5px solid black;
+}
 /* _____________________________________ SETTINGS  _____________________________________ */
 
 p {
@@ -56,9 +69,14 @@ p {
 body {
 	padding: 0;
 	margin: 0;
-	background-color: var(--background-color);
 	width: 100vw;
   	height: 100vh;
+
+  	background: rgba(0, 0, 0, 0.8);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
 }
 
 	body.correct {
@@ -70,40 +88,34 @@ body {
 	}
 
 
-/* HEADER NADPIS */
 
+/* ------------ HEADER NADPIS A POPIS  ---------------- */
 #main-headline {
 	
-	margin: 0rem 1rem;
+	margin: 1rem 1rem;
 	font-family: 'Montserrat', sans-serif; 
 	font-size: 4rem;
 	font-weight: 700;
-	letter-spacing: 8px;
+	letter-spacing: 5px;
 }
 
 #main-info-text {
-	margin: 1rem 0rem;
+	padding: 1rem 0rem;
 	Body: font-family: 'Inconsolata', monospace;
-	font-size: 1.5rem;
+	font-size: 1.0rem;
 	text-transform: uppercase;
 }
+/* ------------ HEADER NADPIS A POPIS  ---------------- */
 
 
-/* HEADER NADPIS */
 
 
-.container {
-	
-	
-}
 
-.box-shadow {
-	padding: 2rem;
-	box-shadow: 0 0 5px 2px;
-}
 
+/* ------------ QUESTION CONTAINER ELEMENT ---------------- */
 #select {
-	height: 100vh; width: 100vw;
+	height: 100vh; 
+	width: 100vw;
 	margin: 0 auto;
 	background-color: var(--background-color);
 }
@@ -124,9 +136,17 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	height: 90vh;
+	height: 93vh;
+	margin-bottom: 2vh;
 	width: auto;
 }
+
+	#question {
+		font-size: 1.25rem;
+		margin: 0;
+		padding: 0;
+		margin-top: 0rem;
+	}
 
 #controls {
 	margin-top: 1rem;
@@ -138,18 +158,29 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	margin-top: 1rem;
+	margin-top: 0rem;
+	flex-wrap: wrap;
 }
 
 #answer-buttons .btn {
-	margin-right: 1rem;
-	margin-left: 1rem;
-	width: 5vw;
+	margin-right: 0rem;
+	margin-left: 0rem;
+	margin-bottom: 1rem;
+	width: 25vw;
+	height: 6vh;
+
+	font-size: 1.4rem;
+	font-weight: 700;
 }
 
-	#answer-buttons button {
-		display: inline-block;
-	}
+.btn-bg {
+	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+	
 
 		.btn.correct, .correct {
 		 background-color: var(--success-color);
@@ -159,25 +190,31 @@ body {
 		background-color: var(--wrong-color);
 		}
 
-#question {
-	margin-top: 1rem;
-}
+		.btn.choose, .choose  {
+		background-color: var(--primary-color);
+		}
+
+		.btn.non-choose, .non-choose  {
+		background-color: grey;
+		}
+
 
 #question-img {
 	height: auto;
 	width: 100%;
-	margin-top: 1rem;
 }
 	
 	#question-img img {
-		width: 100%;
-		max-width: 400px;
+		
+		max-width: 35vh;
 		height: auto;
+		margin-bottom: 1vh;
+
 	}
 
 
 .controls button {
-	height: 10vh;
+	height: 9vh;
 	width: 100%;
 	margin: 0vh 0vh 2vh 0vh;
 	border: 2px solid black;
@@ -188,29 +225,94 @@ body {
 }
 
 
-
-.hide {
-	display: none;
-}
-
-
-#question-controls {
-	height: 10vh;
-	width: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 #question-controls button {
+
 	margin: 0rem 1rem;
-}
 
-#main-footer {
-	position: fixed;
-	bottom: 0;
-	height: 10vh;
+	width: 20vw;
+	height: 6vh;
+
+	max-width: 100px;
+	max-height: 50px;
+}
+/* ------------ QUESTION CONTAINER ELEMENT ---------------- */
+
+
+
+
+
+
+
+/* ------------ INSTRUCTIONS SECTION  ---------------- */
+#instructions {
+	height: 100vh;
 	width: 100vw;
-
-	background-color: grey;
+	padding-top: 10vh;
 }
+
+	#instructions-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#instructions-container p {
+		font-size: 1.1rem;
+		line-height: 1.5rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+/* ------------ INSTRUCTIONS SECTION ---------------- */
+
+
+
+
+
+/* ------------ FOOTER CONTAINER ELEMENT ---------------- */
+
+	#main-footer-container {
+		height: 15vh;
+		width: 100vw;
+
+		display: flex;
+		color: white;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		position: fixed;
+		bottom: 0;
+		background-color: black;
+
+		border-top: 5px solid #0069d9;
+	}
+
+	#main-footer .col {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#main-footer i {
+		padding: 0rem 1rem;
+		color: white;
+	}
+
+	.author {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		flex: 3;
+		height: 100%;
+	}
+
+	.author span {
+		color: #0069d9;
+		font-size: 1.75rem;
+		font-weight: 700;
+		font-family: 'Montserrat', sans-serif; 
+	}
+/* ------------ FOOTER CONTAINER ELEMENT ---------------- */
+

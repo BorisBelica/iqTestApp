@@ -18,6 +18,11 @@
 
       <link href="https://fonts.googleapis.com/css?family=Lato:100,400&display=swap&subset=latin-ext" rel="stylesheet">   
     <!-- FONTS --> 
+    
+    <!-- FONT AWSOME --> 
+    <script src="https://kit.fontawesome.com/dbbb49fd47.js" crossorigin="anonymous"></script>
+    <!-- FONT AWSOME --> 
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
@@ -37,70 +42,252 @@
 
 
   <body>
-    <p id="main-info-text" class="text-center">Zisti výšku svojho IQ</p>
-    <h1 id="main-headline" class="text-center border-primary">IQ TEST</h1>
-    
-
-
 
     <section id="select" class="hide">
-
       <div class="container-fluid">
         <div class="container">
-
           <div class="row text-center">
             <div class="col">
 
               <div id="question-container">
+                
+                <div id="question-timer">
+                  <p id="timer">00:00</p>
+                </div>
+
                 <div id="question" class="">Question</div>
+
                 <div id="question-img"> 
                   <img id="image" src="img/img_test.jpg" class="border border-dark" alt=""> 
                 </div>
 
                 <div id="answer-buttons" class="btn-grid">
-                    <button class="btn btn-dark">Answer 1</button>
+                    <button class="btn btn-dark"></button>
                     <button class="btn btn-dark">Answer 2</button>
                     <button class="btn btn-dark">Answer 3</button>
                     <button class="btn btn-dark">Answer 1</button>
                     <button class="btn btn-dark">Answer 2</button>
                     <button class="btn btn-dark">Answer 3</button>
                 </div>
+
               </div>
 
               <div id="question-controls">
-                <button class="btn btn-danger">Naspäť</button>
-                <button id="next-btn" type="button" class="btn btn-primary " class="next-btn btn">Next</button>
+                <button id="back-btn" type="button" class="btn btn-danger">
+                 <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <button id="next-btn" type="button" class="btn btn-primary next-btn btn">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
               </div>
 
             </div>
           </div>
-
-
         </div>
       </div>  
     </section>
 
     <section id="controls" class="">
+
       <div class="container-fluid">
         <div class="container text-center box-shadow">
           <div class="controls border-success">
-              <button id="start-btn" type="button" class="btn btn-primary" class="start-btn btn btn-primary btn-lg btn-block">Nový test</button>
 
-              <button id="" type="button" class="btn btn-dark btn-lg btn-block">Výsledky</button>
+             <p id="main-info-text" class="text-center"> - Odhaľ výšku svojho IQ - </p>
+            <h1 id="main-headline" class="text-center border-primary">IQ TEST</h1>
 
-              <button id="" type="button" class="btn btn-dark btn-lg btn-block">Informácie</button>
+
+              <button id="instructions-btn" type="button" class="btn btn-primary start-btn btn btn-primary btn-lg btn-block">Krátky test</button>
+
+              <button type="button" class="btn btn-dark btn-lg btn-block">Dlhý test</button>
+
+              <button type="button" class="btn btn-dark btn-lg btn-block">Informácie</button>
 
               <button id="theEnd-btn" type="button" class="theEnd-btn btn btn-danger btn-lg btn-block">Koniec</button>
+
 
           </div>
         </div>
        </div> 
     </section>
 
-    <section id="main-footer" class="text-center">
-      
-          <p class="">FOOTER</p>
 
+
+    <section id="main-footer" class="text-center">
+      <div id="main-footer-container">
+         <div class="row container-fluid">
+          
+          <div class="col write-me">
+            <a href="mailto:boris.belica2(zavinac)gmail.com" class="btn btn-primary">Napíš mi</a>
+          </div>
+
+          <div class="col-6 author">
+            <h3>© Boris <span>Belica</span> 2020</h3>
+            <p class="quote">"If you need inspiring words, don't do it."</p>
+            <p class="quote">- Elon Musk</p>
+          </div>
+
+          <div class="col">
+            <a href="https://www.facebook.com/Borickoo" target="_blank">
+             <i class="fab fa-facebook-square fa-4x"></i>
+            </a>
+            <a href="https://github.com/BorisBelica" target="_blank">
+              <i class="fab fa-github-square fa-4x"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section id="instructions" class="hide">
+      <div class="container-fluid">
+        <div id="instructions-container" class="container text-center box-shadow">
+          <div class="border-success">
+            <h2>Inštrukcie</h2>
+
+              <p>
+                <span></span>
+                Test je najlepšie vykonávať v tichom prostredí bez rušivých vedľajších elementov.
+              </p>
+
+              <p>
+                <span></span>
+                Vyčleňte si naňho potrebný čas, nakoľko test nie je možné stopnúť. 
+              </p>
+    
+
+
+              <p>
+                <span>1.</span>
+                Najprv zodpovedajte otázky, ktoré sa vám zdajú ľahšie.
+              </p>
+
+              <p>
+                <span>2.</span>
+                Následne sa vráťte k otázkam, ktoré ste nezodpovedali.
+              </p>
+
+              <p>
+                <span>3.</span>
+                Ak nebudete vedieť odpoveď - nič si z toho nerobte. Niektoré otázky sú naozaj ťažké.
+              </p>
+
+              <p>
+                <span></span>
+                Odporúčam pripraviť si pero a papier, pri niektorých otázkach Vám môže pomôcť veci si nakresliť/napísať. 
+              </p>
+
+              <p>
+                <span></span> 
+                Pri písmenkových hádankách je použitá abeceda v poradí:
+                 <span>A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.</span>
+              </p>
+
+               <p>
+                Veľa šťastia!
+              </p>
+
+            <button id="start-btn" type="button" class="btn btn-warning btn-lg btn-block hide border border-dark">
+              <i class="fas fa-check"></i>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="questions-end">
+      <div class="container-fluid">
+        <div id="questions-end-container" class="container text-center box-shadow hide">
+          <div class="border-success">
+            <h2>Už to skoro máš</h2>
+
+              <p>
+                <span></span>
+                Dostali ste sa na koniec testu.
+              </p>
+
+              <p>
+                <span></span>
+                Rozhodnite sa či chcete test ukončiť alebo sa vrátite k otázkam.
+              </p>
+
+               <p>
+                Počet odpovedí, ktoré ste vynechali: <span id="NonAnsweredQuestions">xy</span>
+               </p>
+
+              <div id="questions-end-controls">
+                <button id="last-btn" type="button" class="btn btn-danger">
+                 <i class="fas fa-undo"></i>
+                </button>
+
+                <button id="end-btn" type="button" class="btn btn-primary next-btn btn">
+                  <i class="fas fa-check-circle"></i>
+                </button>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="results">
+      <div class="container-fluid">
+        <div id="results-container" class="container text-center box-shadow hide">
+          <div class="border-success">
+            <h2>Výsledky</h2>
+
+              <p>
+                <span></span>
+                Koniec testu! Tu sú výsledky...
+              </p>
+
+              <p>
+                <span></span>
+                Správne odpovede:
+              </p>
+
+               <p>
+                Nesprávne odpovede:
+               </p>
+
+               <p>
+                Výsledné IQ:
+               </p>
+
+               <p>Popis IQ:</p>
+
+              <div id="results-controls">
+                <button type="button" class="btn btn-danger">
+                 <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <button type="button" class="btn btn-primary next-btn btn">
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+
+          </div>
+        </div>
+      </div>
     </section>
 
 
